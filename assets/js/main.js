@@ -196,6 +196,24 @@ const initPageTransition = () => {
   });
 };
 
+const initHeroTilt = () => {
+  const heroCard = document.querySelector('.hero-card');
+  if (!heroCard || prefersReducedMotion) return;
+
+  heroCard.addEventListener('pointermove', (event) => {
+    const rect = heroCard.getBoundingClientRect();
+    const offsetX = (event.clientX - rect.left) / rect.width;
+    const offsetY = (event.clientY - rect.top) / rect.height;
+    const rotateY = (offsetX - 0.5) * 18;
+    const rotateX = (0.5 - offsetY) * 18;
+    heroCard.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-8px)`;
+  });
+
+  heroCard.addEventListener('pointerleave', () => {
+    heroCard.style.transform = 'rotateX(12deg) rotateY(-12deg)';
+  });
+};
+
 window.addEventListener('scroll', () => {
   updateScrollProgress();
   revealOnScroll();
@@ -220,6 +238,7 @@ initTestimonials();
 initFaq();
 initFilters();
 initPageTransition();
+initHeroTilt();
 
 const heroText = ['Professional Websites', 'Powerful Web Applications', 'Future-Ready Digital Solutions'];
 let heroIndex = 0;
