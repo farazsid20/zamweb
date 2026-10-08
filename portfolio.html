@@ -3,12 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio | Zam Web Developers</title>
-    <meta name="description" content="View selected portfolio work by Zam Web Developers featuring premium business websites and digital products." />
-    <link rel="canonical" href="https://zamwebdevelopers.com/portfolio.html" />
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+    <title>Portfolio | ZAM WEB DEVELOPER</title>
+    <meta name="description" content="View selected portfolio work by ZAM WEB DEVELOPER featuring premium business websites and digital products." />
+    <link rel="canonical" href="https://zamai.shop/portfolio.html" />
+    <meta property="og:title" content="Portfolio | ZAM WEB DEVELOPER" />
+    <meta property="og:description" content="View selected portfolio work by ZAM WEB DEVELOPER featuring premium business websites and digital products." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://zamai.shop/portfolio.html" />
+    <meta property="og:image" content="https://zamai.shop/assets/images/founder.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Portfolio | ZAM WEB DEVELOPER" />
+    <meta name="twitter:description" content="View selected portfolio work by ZAM WEB DEVELOPER featuring premium business websites and digital products." />
+    <meta name="twitter:image" content="https://zamai.shop/assets/images/founder.jpg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
   <body>
@@ -19,8 +29,8 @@
     <header class="site-header">
       <div class="container">
         <nav class="navbar" aria-label="Primary navigation">
-          <a class="brand" href="index.html"><span class="brand-mark"></span><span>Zam Web Developers</span></a>
-          <div class="nav-links">
+          <a class="brand" href="index.html"><span class="brand-mark"></span><span>ZAM WEB DEVELOPER</span></a>
+          <div class="nav-links" id="site-nav">
             <a href="index.html">Home</a>
             <a href="services.html">Services</a>
             <a href="portfolio.html" class="active">Portfolio</a>
@@ -28,12 +38,14 @@
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
           </div>
+          <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-nav"><span></span><span></span></button>
           <div class="nav-actions"><button class="icon-btn" id="theme-toggle" aria-label="Toggle theme">☀︎</button><a class="btn" href="contact.html">Discuss a Project</a></div>
         </nav>
       </div>
     </header>
 
     <main>
+      <section class="page-intro"><div class="container reveal"><div class="eyebrow">Selected work / Digital, made distinct</div><h1>Work that moves businesses forward.</h1><p>A snapshot of the digital experiences and platforms we create across business, education, healthcare and commerce.</p></div></section>
       <section class="section-shell">
         <div class="container">
           <div class="section-heading reveal">
@@ -52,18 +64,18 @@
             <button class="filter-chip" data-filter="Software">Software</button>
           </div>
           <div class="portfolio-grid">
-            <article class="portfolio-card reveal" data-category="Business"><img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80" alt="Business website showcase" /><h3>Northstar Advisory</h3><p>Executive-grade corporate website with sleek storytelling and conversion-focused sections.</p><div class="portfolio-actions"><span>HTML / CSS / JS</span><a class="card-link" href="contact.html">View Project</a></div></article>
-            <article class="portfolio-card reveal" data-category="School"><img src="evergreen.jpeg">Evergreen Academy</h3><p>High-trust learning portal with admissions flows, CMS content and event management.</p><div class="portfolio-actions"><span>HTML / CSS / JS</span><a class="card-link" href="contact.html">View Project</a></div></article>
-            <article class="portfolio-card reveal" data-category="Hospital"><img src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=900&q=80" alt="Hospital website showcase" /><h3>Nova Care Hospital</h3><p>Accessible, reassuring experience designed around patient trust and fast information access.</p><div class="portfolio-actions"><span>HTML / CSS / JS</span><a class="card-link" href="contact.html">View Project</a></div></article>
-            <article class="portfolio-card reveal" data-category="E-Commerce"><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=80" alt="E-commerce showcase" /><h3>Atlas Commerce</h3><p>Luxury storefront with premium aesthetics, mobile-first UX and catalog performance.</p><div class="portfolio-actions"><span>HTML / CSS / JS</span><a class="card-link" href="contact.html">View Project</a></div></article>
-            <article class="portfolio-card reveal" data-category="Software"><img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=80" alt="Software dashboard showcase" /><h3>Operations Cloud</h3><p>Custom analytics dashboard built to simplify reporting, approvals and workflows.</p><div class="portfolio-actions"><span>HTML / .NET / C#</span><a class="card-link" href="contact.html">View Project</a></div></article>
-            <article class="portfolio-card reveal" data-category="Business"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80" alt="Business portal showcase" /><h3>Vertex Ventures</h3><p>Modern investment platform presentation with polished storytelling and lead generation.</p><div class="portfolio-actions"><span>HTML / CSS / JS</span><a class="card-link" href="contact.html">View Project</a></div></article>
+            <article class="portfolio-card reveal" data-category="Business" data-cursor-label="VIEW"><img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80" alt="Business website showcase" loading="lazy" decoding="async" /><h3>Northstar Advisory</h3><p>Executive-grade corporate website with sleek storytelling and conversion-focused sections.</p><div class="portfolio-actions"><span>HTML / CSS / JS</span><a class="card-link" href="contact.html">View Project</a></div></article>
+            <article class="portfolio-card reveal" data-category="School" data-cursor-label="VIEW"><img src="assets/images/evergreen.jpeg" alt="Evergreen Academy campus" loading="lazy" decoding="async" /><h3>Evergreen Academy</h3><p>High-trust learning portal with admissions flows, CMS content and event management.</p><div class="portfolio-actions"><span>HTML / CSS / JS</span><a class="card-link" href="contact.html">View Project</a></div></article>
+            <article class="portfolio-card reveal" data-category="Hospital" data-cursor-label="VIEW"><img src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=900&q=80" alt="Hospital website showcase" loading="lazy" decoding="async" /><h3>Nova Care Hospital</h3><p>Accessible, reassuring experience designed around patient trust and fast information access.</p><div class="portfolio-actions"><span>HTML / CSS / JS</span><a class="card-link" href="contact.html">View Project</a></div></article>
+            <article class="portfolio-card reveal" data-category="E-Commerce" data-cursor-label="VIEW"><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=80" alt="E-commerce showcase" loading="lazy" decoding="async" /><h3>Atlas Commerce</h3><p>Luxury storefront with premium aesthetics, mobile-first UX and catalog performance.</p><div class="portfolio-actions"><span>HTML / CSS / JS</span><a class="card-link" href="contact.html">View Project</a></div></article>
+            <article class="portfolio-card reveal" data-category="Software" data-cursor-label="VIEW"><img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=80" alt="Software dashboard showcase" loading="lazy" decoding="async" /><h3>Operations Cloud</h3><p>Custom analytics dashboard built to simplify reporting, approvals and workflows.</p><div class="portfolio-actions"><span>HTML / .NET / C#</span><a class="card-link" href="contact.html">View Project</a></div></article>
+            <article class="portfolio-card reveal" data-category="Business" data-cursor-label="VIEW"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80" alt="Business portal showcase" loading="lazy" decoding="async" /><h3>Vertex Ventures</h3><p>Modern investment platform presentation with polished storytelling and lead generation.</p><div class="portfolio-actions"><span>HTML / CSS / JS</span><a class="card-link" href="contact.html">View Project</a></div></article>
           </div>
         </div>
       </section>
     </main>
 
-    <footer class="footer"><div class="container footer-grid"><div><div class="brand" style="margin-bottom:0.9rem;"><span class="brand-mark"></span><span>Zam Web Developers</span></div><p>Premium websites, web apps, software and digital transformation services for ambitious businesses.</p></div><div><h3>Quick Links</h3><div class="footer-links"><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="pricing.html">Pricing</a><a href="contact.html">Contact</a></div></div><div><h3>Connect</h3><div class="socials"><a href="https://wa.me/919161007123" target="_blank" rel="noreferrer">WhatsApp</a><a href="mailto:farazsid20@gmail.com">Email</a><a href="tel:+919161007123">Phone</a></div></div></div><div class="container" style="margin-top:1.2rem;color:var(--muted);font-size:0.95rem;">© <span id="year"></span> Zam Web Developers. All rights reserved.</div></footer>
+    <footer class="footer"><div class="container footer-grid"><div><div class="brand" style="margin-bottom:0.9rem;"><span class="brand-mark"></span><span>ZAM WEB DEVELOPER</span></div><p>Premium websites, web apps, software and digital transformation services for ambitious businesses.</p></div><div><h3>Quick Links</h3><div class="footer-links"><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="pricing.html">Pricing</a><a href="contact.html">Contact</a></div></div><div><h3>Connect</h3><div class="socials"><a href="https://wa.me/919161007123" target="_blank" rel="noreferrer">WhatsApp</a><a href="mailto:farazsid20@gmail.com">Email</a><a href="tel:+919161007123">Phone</a></div></div></div><div class="container" style="margin-top:1.2rem;color:var(--muted);font-size:0.95rem;">© <span id="year"></span> ZAM WEB DEVELOPER. All rights reserved.</div></footer>
     <button class="back-to-top" id="back-to-top" aria-label="Back to top">↑</button>
     <script src="assets/js/main.js"></script>
   </body>
