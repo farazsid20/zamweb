@@ -132,9 +132,11 @@
         const rect = card.getBoundingClientRect();
         const x = (event.clientX - rect.left) / rect.width - 0.5;
         const y = (event.clientY - rect.top) / rect.height - 0.5;
+        card.style.setProperty('--pointer-x', `${event.clientX - rect.left}px`);
+        card.style.setProperty('--pointer-y', `${event.clientY - rect.top}px`);
         card.style.transform = `perspective(900px) rotateX(${y * -3}deg) rotateY(${x * 4}deg) translateY(-2px)`;
       });
-      card.addEventListener('pointerleave', () => { card.style.transform = ''; });
+      card.addEventListener('pointerleave', () => { card.style.transform = ''; card.style.removeProperty('--pointer-x'); card.style.removeProperty('--pointer-y'); });
     });
     $$('.btn,.btn-secondary').forEach((button) => {
       button.addEventListener('pointermove', (event) => {
@@ -221,15 +223,21 @@
     });
   });
 
-  $$('.filter-chip').forEach((chip) => chip.addEventListener('click', () => {
-    $$('.filter-chip').forEach((item) => item.classList.toggle('active', item === chip));
-    const filter = chip.dataset.filter;
-    $$('.portfolio-card').forEach((card) => {
-      const matches = filter === 'all' || card.dataset.category === filter;
-      card.hidden = !matches;
-      if (matches) card.classList.add('visible');
-    });
-  }));
+  $$('.filter-chip').forEach((chip) => {
+    chip.setAttribute('aria-pressed', String(chip.classList.contains('active')));
+    chip.addEventListener('click', () => {
+      $$('.filter-chip').forEach((item) => {
+        item.classList.toggle('active', item === chip);
+        item.setAttribute('aria-pressed', String(item === chip));
+      });
+      const filter = chip.dataset.filter;
+      $$('.portfolio-card').forEach((card) => {
+        const matches = filter === 'all' || card.dataset.category === filter;
+        card.hidden = !matches;
+        if (matches) card.classList.add('visible');
+      });
+  });
+  });
 
   // Existing counters animate once when visible rather than consuming frames offscreen.
   const counters = $$('.stat-card .value[data-count]');
